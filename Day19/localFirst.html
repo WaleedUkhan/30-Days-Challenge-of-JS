@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localStorage</title>
+    <style>
+      body {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>localStorage Practice</h1>
+
+    <script>
+
+        //step1 creating Object
+      const myObj = {
+        Name: "Zahoor Khan",
+        FatherName: "Qaisap Khan",
+        Village: "Kirri Malang",
+        Status: "Married",
+      };
+
+      //step-2 converting obj to JSON 
+      let myJSON = JSON.stringify(myObj);
+
+      //step-3 Saving JSON to localStorage 
+      
+      localStorage.setItem("myObj", myJSON);
+
+      // Step 4: Retrieve the JSON string from localStorage
+      const retrievedUserJSON = localStorage.getItem("myObj");
+
+      // Step 5: Parse the JSON string back to an object
+      const retrievedObj = JSON.parse(retrievedUserJSON);
+
+      // Step 6: Log the object
+      console.log(retrievedObj);
+
+
+    </script>
+  </body>
+</html>

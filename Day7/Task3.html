@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="task3">This will be deleted by JS</h2>
+    <h3>Above heading was deleted by JS</h3>
+
+    <ul id="myList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>element to be Removed</li>
+    </ul>
+
+    <a id="myLink" href="https://waleedCodes.com"  >Click here</a>
+    <img id="myImage" src="https://waleedkiPhoto.com" alt="">
+
+    <script>
+      let element = document.getElementById("task3");
+      element.remove();
+
+      // Select the parent element (ul in this case)
+      var parentElement = document.getElementById("myList");
+
+      // Check if the parent element has any children
+      if (parentElement.lastElementChild) {
+        // Remove the last child element
+        parentElement.removeChild(parentElement.lastElementChild);
+      }
+
+      var link = document.getElementById("myLink");
+      var src = document.getElementById("myImage");
+
+      var hrefValue = link.getAttribute("href");
+      var srcValue = src.getAttribute("src");
+
+      console.log(hrefValue); 
+      console.log(srcValue);
+    </script>
+  </body>
+</html>

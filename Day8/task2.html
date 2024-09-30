@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- MouseEvents in JS DOM -->
+     <h2 id="One" >background-color Changes karna ha JS k via</h2>
+
+    <script>
+
+        let e = document.getElementById("One");
+
+        e.addEventListener('mouseover', function(){
+            e.style.backgroundColor= "magenta";
+        })
+
+        e.addEventListener('mouseout', function(){
+            e.style.backgroundColor = 'gray';
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Event Delegation Example</h1>
+    <ul id="itemList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+
+    <script>
+      // script.js
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const itemList = document.getElementById("itemList");
+
+        // Add event listener to the parent element (ul)
+        itemList.addEventListener("click", (e) => {
+          // Check if the clicked element is a list item (li)
+          if (e.target && e.target.nodeName === "LI") {
+            // Log the text content of the clicked list item
+            console.log(`Clicked on item: ${e.target.textContent}`);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

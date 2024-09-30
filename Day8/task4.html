@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" id="task4"> 
+        <input type="text"  id="formData" >
+        <button>Submitt</button>
+    </form>
+    <script>
+         
+         let formevent = document.getElementById("task4");
+         let formdata = document.getElementById("formData");
+
+         formevent.addEventListener('submitt', function(e){
+            e.preventDefault;
+         })
+
+         formdata.addEventListener('submitt', function(){
+            formdata.textContent = formData.value;
+         })
+    </script>
+</body>
+</html>

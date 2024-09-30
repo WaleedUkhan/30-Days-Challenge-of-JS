@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorten Long Name</title>
+</head>
+<body>
+    <h1>Shorten Long Name from API</h1>
+    <p id="original-name">Original Name: </p>
+    <p id="shortened-name">Shortened Name: </p>
+
+    <script>
+        // Function to fetch the long name from the API
+        async function fetchLongName() {
+            try {
+                // Using Random User API to get user data
+                const response = await fetch('https://randomuser.me/api/');
+                const data = await response.json();
+                const user = data.results[0];
+                // Combining first name, last name and title for a longer name
+                const longName = `${user.name.title} ${user.name.first} ${user.name.last}`;
+                return longName;
+            } catch (error) {
+                console.error('Error fetching the long name:', error);
+                return '';
+            }
+        }
+
+        // Function to shorten the long name
+        function shortenName(name, maxLength) {
+            if (name.length <= maxLength) {
+                return name;
+            }
+            return name.substring(0, maxLength) + '...';
+        }
+
+        // Main function to get and display the names
+        async function displayNames() {
+            const longName = await fetchLongName();
+            const maxLength = 10; // Maximum length for the shortened name
+
+            document.getElementById('original-name').textContent += longName;
+            const shortenedName = shortenName(longName, maxLength);
+            document.getElementById('shortened-name').textContent += shortenedName;
+        }
+
+        // Call the main function to execute the program
+        displayNames();
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Select Dropdown Event Example</h1>
+    <form id="myForm">
+      <div>
+        <label for="options">Choose an option:</label>
+        <select id="options" name="options">
+          <option value="Option 1">Option 1</option>
+          <option value="Option 2">Option 2</option>
+          <option value="Option 3">Option 3</option>
+        </select>
+      </div>
+      <p id="selectedValue">Selected value will be displayed here</p>
+    </form>
+
+    <script>
+      // script.js
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const select = document.getElementById("options");
+        const selectedValueParagraph = document.getElementById("selectedValue");
+
+        // Handle change event for select dropdown
+        select.addEventListener("change", (e) => {
+          const selectedValue = e.target.value;
+          selectedValueParagraph.textContent = `Selected value: ${selectedValue}`;
+        });
+      });
+    </script>
+  </body>
+</html>

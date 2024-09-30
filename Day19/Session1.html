@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Session Storage Lecture</h1>
+
+    <!-- Script to setItem to session Storage -->
+
+    <!-- <script> -->
+    // Function to save a string value to sessionStorage function
+    saveToSessionStorage(key, value) { sessionStorage.setItem(key, value);
+    console.log(`Saved: ${key} = ${value}`); } // Function to retrieve a value
+    from sessionStorage and log it function retrieveFromSessionStorage(key) {
+    const value = sessionStorage.getItem(key); console.log(`Retrieved: ${key} =
+    ${value}`); return value; } // Example usage const key = "exampleKey"; const
+    value = "Hello, sessionStorage!"; // Save to sessionStorage
+    saveToSessionStorage(key, value); // Retrieve from sessionStorage and log
+    the value retrieveFromSessionStorage(key);
+    <!-- </script> -->
+
+    <!-- Script to remove item from Session Storage -->
+
+    <script>
+      // Function to save a string value to sessionStorage
+      function saveToSessionStorage(key, value) {
+        sessionStorage.setItem(key, value);
+        console.log(`Saved: ${key} = ${value}`);
+      }
+
+      // Function to retrieve a value from sessionStorage and log it
+      function retrieveFromSessionStorage(key) {
+        const value = sessionStorage.getItem(key);
+        console.log(`Retrieved: ${key} = ${value}`);
+        return value;
+      }
+
+      // Function to remove a value from sessionStorage
+      function removeFromSessionStorage(key) {
+        sessionStorage.removeItem(key);
+        console.log(`Removed: ${key}`);
+      }
+
+      // Example usage
+      const key = "exampleKey";
+      const value = "Hello, sessionStorage!";
+
+      // Save to sessionStorage
+      saveToSessionStorage(key, value);
+
+      // Retrieve from sessionStorage and log the value
+      retrieveFromSessionStorage(key);
+
+      // Remove from sessionStorage
+      removeFromSessionStorage(key);
+
+      // Attempt to retrieve the removed item
+      retrieveFromSessionStorage(key);
+    </script>
+  </body>
+</html>

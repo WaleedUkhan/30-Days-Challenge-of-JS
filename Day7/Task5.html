@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        #taski1{
+            border: 5px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="task5">When you Click the below button the text will be Changed</p>
+    <button onclick="addText()">Click Me</button>
+
+
+    <h1 id="taski1">Border Color will be changed by JS</h1>
+
+    <button onmouseover="changeBorder()">Click Me</button>
+    <script>
+
+        function addText(){
+            let element = document.getElementById("task5");
+            element.innerText = "The para is changed by JS function";
+        }
+
+        function changeBorder(){
+            let element1 = document.getElementById("taski1");
+            element1.style.borderColor = "blue";
+        }
+    </script>
+</body>
+</html>

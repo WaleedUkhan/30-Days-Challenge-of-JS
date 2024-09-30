@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+      #task1 {
+        color: blue;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="task1">This is the First Task of <span> DOM Chapter </span></h3>
+    <h2 class="task2">The Background color will be decided By JS</h2>
+
+    <h2 class="task3">The Background color will be decided by JS Also</h2>
+
+    <script>
+      document.getElementById("task1").innerText = "This is changed by  JS ";
+      // document.getElementsByClassName("task1").style.background-color = "blue";
+
+      var elements = document.getElementsByClassName("task2");
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].style.backgroundColor = "yellow"; // Set your desired background color
+      }
+
+      var element = document.querySelector(".task3");
+      element.style.backgroundColor = "red"; // Set your desired background color
+    </script>
+  </body>
+</html>

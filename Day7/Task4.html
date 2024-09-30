@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Adding and Removing CSS class to/From html -->
+     <h3 id="task4">Hello  CSS</h3>
+     <button onclick="addClass()">Click me to Add Class</button>
+     <br><br>
+     <button onclick="removeClass()">Click me to Remove Class</button>
+
+     <script>
+
+        //addClass function 
+        function addClass(){
+           let element =  document.getElementById("task4");
+           element.classList.add('highlight');
+        }
+
+        //Remove Class function 
+        function removeClass(){
+            let element1 = document.getElementById("task4");
+            element1.classList.remove('highlight');
+        }
+     </script>
+</body>
+</html>

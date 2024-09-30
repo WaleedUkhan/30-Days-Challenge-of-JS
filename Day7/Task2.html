@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: powderblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+      
+    <script>
+        let newDiv = document.createElement('div');
+        newDiv.textContent = "This text is Added by JS inside/Into HTML ";
+        document.body.appendChild(newDiv);
+
+        let newLi = document.createElement('li');
+        newLi.textContent = "New Item added by JS";
+
+        let ul = document.getElementById("myList");
+        ul.appendChild(newLi);
+        
+    </script>
+</body>
+</html>

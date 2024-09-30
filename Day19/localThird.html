@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Item from LocalStorage</title>
+  </head>
+  <body>
+    <h1>Remove Item from LocalStorage</h1>
+    <button id="removeButton">Remove Item</button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Function to log the contents of localStorage
+        const logLocalStorage = () => {
+          console.log(
+            "LocalStorage contents:",
+            JSON.stringify(localStorage, null, 2)
+          );
+        };
+
+        // Function to add an item to localStorage for demonstration purposes
+        const addItemToLocalStorage = () => {
+          localStorage.setItem("testItem", "This is a test item");
+        };
+
+        // Function to remove an item from localStorage
+        const removeItemFromLocalStorage = (key) => {
+          localStorage.removeItem(key);
+        };
+
+        // Add an item to localStorage
+        addItemToLocalStorage();
+
+        // Log the contents of localStorage before removal
+        console.log("Before removal:");
+        logLocalStorage();
+
+        // Remove the item when the button is clicked
+        
+        const removeButton = document.getElementById("removeButton");
+        removeButton.addEventListener("click", () => {
+          removeItemFromLocalStorage("testItem");
+
+          // Log the contents of localStorage after removal
+          console.log("After removal:");
+          logLocalStorage();
+        });
+      });
+    </script>
+  </body>
+</html>

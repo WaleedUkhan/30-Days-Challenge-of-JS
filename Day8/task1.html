@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #task1{
+            color: white;
+            font-size: large;
+            font-weight: 500;
+        }
+        .hidden{
+           visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <p id="task1">its content will be Changed by JS</p>
+
+    <button onclick="changeText()">Click ME</button>
+    <br>
+    <br>
+
+    <!-- task2 -->
+
+    <img id="task2" src="image2.JPG" alt="" width="300" height=" 200" >
+
+   
+
+    <script>
+
+        function changeText(){
+            let e = document.getElementById("task1");
+            e.innerText= "Changed By JS Dynamically";
+        }
+
+        var image = document.getElementById('task2');
+
+        image.addEventListener('dblclick', function() {
+            if (image.classList.contains('hidden')) {
+                image.classList.remove('hidden');
+            } else {
+                image.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
